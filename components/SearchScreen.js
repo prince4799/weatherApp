@@ -16,14 +16,14 @@ const Search = () => {
     country: "loading",
     icon: "-",
   });
-  useEffect(()=>{
-    async function getData (){
-      url=(await AsyncStorage.getItem('image'))
-      city=(await AsyncStorage.getItem('city'))
+   useEffect( ()=>{
+   async function get (){
+      url=await AsyncStorage.getItem('image')
+      city=await AsyncStorage.getItem('city')
       fetcCities(city)
-    }
     console.log(city +"from use effect");
     console.log(url +"from use effect");
+   }
   })
   console.log(city);
   
@@ -50,7 +50,7 @@ const Search = () => {
         "Access-Control-Allow-Headers": "*",
       },
     }, 
-    // console.log("running...by the way ")
+    
     )
       .then(item => item.json())
       .then((json) => {setData({
@@ -73,7 +73,7 @@ const Search = () => {
       <StatusBar hidden={true} />
       <LinearGradient colors={['rgba(123, 116, 91, 0.81)', 'rgba(11, 10, 4, 0.81)']} style={styles.gradient}>
         <Text style={styles.title}>Mausam</Text>
-        <Text style={styles.superScript}>  v1.0</Text>
+        <Text style={styles.superScript}>  v1.2</Text>
       </LinearGradient>
       <Searchbar
         placeholder='Search City'
@@ -91,12 +91,13 @@ const Search = () => {
 const styles = StyleSheet.create({
   gradient: {
     alignItems: 'center',
-    height: 70,
+    height: 50,
     justifyContent: 'center',
     borderBottomRightRadius: 80,
     borderBottomLeftRadius: 80,
     borderRadius: 30,
-    margin: 5,
+    margin: 15,
+    marginTop: 5,
     borderColor: '#d1d1eb',
     borderWidth: 2,
     flexDirection:'row'

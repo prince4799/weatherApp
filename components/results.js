@@ -35,8 +35,8 @@ const Results = ({ data ,image}) => {
                style={{
                    width:65,
                    height:65,
-                   left:230,bottom:50,
-                   backgroundColor: 'rgba(250, 247, 240, 0.4)',
+                   left:240,top:155,
+                   backgroundColor: 'rgba(39, 180, 236, 0.62)',
                    borderColor:"white",
                    borderWidth: 2,
                    borderRadius:40
