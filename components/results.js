@@ -7,7 +7,7 @@ const customheight =Dimensions.get("window").height;
 const Results = ({ data ,image}) => {
     const [imageURL,setImageURL]=useState('loading...');
     useEffect(()=>{
-        fetch(`https://api.unsplash.com/search/photos?page=1&query=${data.name}&client_id=9C4g1ogzzfA8s57vpwYqp3To9IqEIIugUsk8oNM9fmQ`,{
+        fetch(`https://api.unsplash.com/search/photos?page=1&query=${data.name}&client_id=YOUR_API_KEY`,{
         method:"GET",
         mode:"no-cors",
         headers:{
