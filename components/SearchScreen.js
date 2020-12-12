@@ -40,7 +40,7 @@ const Search = () => {
       await AsyncStorage.setItem("city",text)
       console.log(city);
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${text}&appid=7b686b5a40de14e0bd5e63deb86f5ddf`, {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${text}&appid=YOUR_API_KEY`, {
       method: "GET",
       mode: "no-cors",
       headers: {
